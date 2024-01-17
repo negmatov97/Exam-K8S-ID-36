@@ -1,0 +1,2 @@
+docker build -t devvinc/flask-app:v2 
+docker push devvinc/flask-app:v2

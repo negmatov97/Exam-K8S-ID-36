@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: flask-app
+  name: flask-app
+  namespace: exam-36
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: flask-app
+    spec:
+      containers:
+        - image: devvinc/flask-app:v2
+          name: flask-app
+          env:
+            - name: ENVIRONMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: info
+                  key: env
+            - name: LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  name: info
+                  key: log_level
+            - name: GRPC_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: info
+                  key: grpc_port
+            - name: DB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: secret-database
+                  key: DB_URI
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+

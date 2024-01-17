@@ -1,0 +1,13 @@
+Name:         flask-service2
+Namespace:    exam-36
+Labels:       app=flask-app
+Annotations:  endpoints.kubernetes.io/last-change-trigger-time: 2024-01-17T16:40:00Z
+Subsets:
+  Addresses:          10.233.66.152,10.233.67.141,10.233.68.104
+  NotReadyAddresses:  <none>
+  Ports:
+    Name     Port  Protocol
+    ----     ----  --------
+    <unset>  5000  TCP
+
+Events:  <none>

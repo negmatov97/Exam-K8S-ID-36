@@ -1,0 +1,2 @@
+kubectl apply -f ingr.yaml
+curl http://ulugbek-n.nvrbckdown.uz/check-ingress

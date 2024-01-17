@@ -1,0 +1,6 @@
+frontend-service   NodePort   10.233.11.151   <none>        80:31612/TCP   2m49s
+Connecting to frontend-service (10.233.11.151:80)
+saving to 'index.html'
+index.html           100% |********************************|    72  0:00:00 ETA
+'index.html' saved
+{"env":"staging","http_port":"80","string":"Welcome to DevOps Course!"}

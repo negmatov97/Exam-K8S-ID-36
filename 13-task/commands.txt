@@ -1,0 +1,1 @@
+kubectl expose deployment flask-app --type=ClusterIP --name=flask-service2 --port=80 --target-port=5000 -n exam-36
